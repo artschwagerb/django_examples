@@ -15,12 +15,6 @@ from django.contrib.auth.decorators import user_passes_test
 from django.contrib.auth.decorators import login_required, permission_required
 from django.db.models import Q
 
-#from actstream import action
-
-from eventasaurus.functions import *
-from htps.models import *
-
-#from tickets.tasks import send_update
 
 from datetime import datetime, timedelta
 from django.utils import timezone
