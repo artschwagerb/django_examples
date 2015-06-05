@@ -10,8 +10,6 @@ from django.views.decorators.cache import never_cache
 
 import json
 
-from reportlab.pdfgen import canvas
-
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import user_passes_test
 from django.contrib.auth.decorators import login_required, permission_required
@@ -26,17 +24,6 @@ from htps.models import *
 
 from datetime import datetime, timedelta
 from django.utils import timezone
-
-import logging
-logger = logging.getLogger(__name__)
-
-#Check Notifications
-from django.conf import settings
-
-if "notification" in settings.INSTALLED_APPS:
-	from notification import models as notification
-else:
-	notification = None
 
 # Create your views here.
 @never_cache
